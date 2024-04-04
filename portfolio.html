@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Bean Studios</title>
+    <link rel="stylesheet" href="styles.css"> <!-- If you have an external stylesheet -->
+    <style>
+        /* Internal CSS can also be used */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ACB6DA;
+        }
+        header {
+            background-color: #1D4972;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #7A89C2;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #659FB9;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .portfolio-item {
+            width: 30%;
+            float: left;
+            background: #CBDEF6;
+            margin-right: 5%;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .portfolio-item:last-child {
+            margin-right: 0;
+        }
+        .portfolio-item h3 {
+            margin-top: 0;
+        }
+        .see-more {
+            clear: both;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .see-more a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #333;
+            background-color: #B6CCE2;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        .see-more a:hover {
+            background-color: #659FB9;
+        }
+        footer {
+            background-color: #1D4972;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Bean Studios</h1>
+    </header>
+    <nav>
+        <a href="https://www.rabslabs.xyz/bean-studio">Home</a>
+        <a href="https://www.rabslabs.xyz/bean-studio/about">About</a>
+        <a href="https://www.rabslabs.xyz/bean-studio/services">Services</a>
+        <a href="https://www.rabslabs.xyz/bean-studio/portfolio">Portfolio</a>
+        <a href="https://www.rabslabs.xyz/bean-studio/contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="portfolio-item">
+            <h3>Project 1</h3>
+            <p>Description of project 1.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Project 2</h3>
+            <p>Description of project 2.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Project 3</h3>
+            <p>Description of project 3.</p>
+        </div>
+        <!-- Add more portfolio items as needed -->
+    </div>
+    <div class="see-more">
+        <a href="#">See More</a>
+        <a href="#">Follow us on Facebook</a>
+        <a href="#">Follow us on Twitter</a>
+        <a href="#">Follow us on Instagram</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Bean Studios. All rights reserved.</p>
+    </footer>
+</body>
+</html>

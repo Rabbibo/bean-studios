@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bean Studios</title>
+    <link rel="stylesheet" href="styles.css"> <!-- If you have an external stylesheet -->
+    <style>
+        /* Internal CSS can also be used */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ACB6DA;
+        }
+        header {
+            background-color: #1D4972;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #7A89C2;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #659FB9;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .main-content {
+            width: 70%;
+            float: left;
+            background: #CBDEF6;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 30%;
+            float: right;
+            background: #B6CCE2;
+            padding: 20px;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #1D4972;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+        .email-section {
+            margin-top: 20px;
+        }
+        .email-section h3 {
+            margin-top: 0;
+        }
+        .email-section p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Bean Studios</h1>
+    </header>
+    <nav>
+        <a href="https://www.rabslabs.xyz/bean-studio">Home</a>
+        <a href="https://www.rabslabs.xyz/bean-studio/about">About</a>
+        <a href="https://www.rabslabs.xyz/bean-studio/services">Services</a>
+        <a href="https://www.rabslabs.xyz/bean-studio/portfolio">Portfolio</a>
+        <a href="https://www.rabslabs.xyz/bean-studio/contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us using the form below:</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="sidebar">
+            <h3>Connect With Us</h3>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="email-section">
+                <h3>Email Us</h3>
+                <p>General Inquiries: supernoob08@rabslabs.xyz</p>
+                <p>Support: supernoob08@rabslabs.xyz</p>
+                <p>Altereel: altereel@rabslabs.xyz</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Bean Studios. All rights reserved.</p>
+    </footer>
+</body>
+</html>

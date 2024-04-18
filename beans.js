@@ -2,11 +2,11 @@ xconst image = document.getElementById('image');
 const container = document.getElementById('container');
 let directionX = getRandomDirection(); // Initial horizontal direction (random)
 let directionY = getRandomDirection(); // Initial vertical direction (random)
-let speed = 2; // Initial speed (pixels per frame)
+let speed = 4; // Initial speed (pixels per frame)
 
 function getRandomDirection() {
     // Generate a random number between -1 and 1
-    return Math.random() * 2 - 1;
+    return Math.random() * 4 - 1;
 }
 
 function moveImage() {

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Bean Studios</title>
+    <link rel="stylesheet" href="styles.css"> <!-- If you have an external stylesheet -->
+    <link rel="shortcut icon" type="image/png" href="BS-outline-logo.png"> <!-- Add this line for favicon -->
+    <style>
+        /* Internal CSS can also be used */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ACB6DA;
+        }
+        header {
+            background-color: #1D4972;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #7A89C2;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: #659FB9;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic grid with minimum width of 200px */
+        }
+        .service-item {
+            background-color: #CBDEF6;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        footer {
+            background-color: #1D4972;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <img src="BS-outline-banner.png" alt="Bean Studios Logo" class="logo">
+    </header>
+    <nav>
+        <a href="https://bean.rabslabs.xyz">Home</a>
+        <a href="https://bean.rabslabs.xyz/about">About</a>
+        <a href="https://bean.rabslabs.xyz/services">Services</a>
+        <a href="https://bean.rabslabs.xyz/portfolio">Portfolio</a>
+        <a href="https://bean.rabslabs.xyz/contact">Contact</a>
+        <a href="https://bean.rabslabs.xyz/cube">Cube</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSekTmaBF7XemsOMZalze65wa0EucxGEI1QZHHo1HOgbIITRjQ/viewform?usp=sf_link">Feedback</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSccLSPXIEi1S1EOcA8tx-BRYpI8UFwyaYsRNBd6Ao84fUfVSg/viewform?usp=sf_link">Order</a>
+        <a href="https://www.rabslabs.xyz/">Back to RL</a>
+    </nav>
+    <div class="container">
+        <div class="grid">
+            <div class="service-item">
+                <h2>Web Design</h2>
+                <p>We design stunning and responsive websites tailored to your needs.</p>
+            </div>
+            <div class="service-item">
+                <h2>Graphic Animation</h2>
+                <p>We create captivating animations and graphics to enhance your projects.</p>
+            </div>
+            <div class="service-item">
+                <h2>CAD Services</h2>
+                <p>We provide Computer-Aided Design (CAD) services for various industries.</p>
+            </div>
+            <!-- Add more service items as needed -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Bean Studios. All rights reserved.</p>
+    </footer>
+</body>
+</html>

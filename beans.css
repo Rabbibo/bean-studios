@@ -1,30 +1,41 @@
+:root {
+  --width: 300px;
+  --x-speed: 13s;
+  --y-speed: 7s;
+  --transition-speed: 2.2s;
+}
+
 $size: 100px;
 
 body {
   margin: 0;
-}
- 
-img, div {
-  width: $size;
-  height: $size;
+  overflow: hidden;
+  background: #546E7A;
 }
 
 .x {
-  animation: x 13s linear infinite alternate;
+  animation: x var(--x-speed) linear infinite alternate;
 }
-
+.x2 {
+  animation: x2 var(--x-speed) linear infinite alternate;
+}
 .y {
-  animation: y 7s linear infinite alternate;
+  animation: y var(--y-speed) linear infinite alternate;
 }
 
 @keyframes x {
   100% {
-    transform: translateX( calc(100vw - #{$size}) );
+    transform: translateX(calc(100vw - var(--width)));
+  }
+}
+@keyframes x2 {
+  100% {
+    transform: translateX(calc(-100vw + var(--width)));
   }
 }
 
 @keyframes y {
   100% {
-    transform: translateY( calc(100vh - #{$size}) );
+    transform: translateY(calc(100vh - var(--width)));
   }
 }

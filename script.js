@@ -1,42 +1,45 @@
-let dvd = document.getElementById('dvd');
-let interval_id;
-let x_incr = 1;
-let y_incr = 1;
+const section = document.querySelector("section");
+const logo = document.querySelector(".logo");
+const FPS = 60;
+section.style.height = window.innerHeight + "px";
+section.style.width = window.innerWidth + "px";
 
-function init() {
-  update_color();
-  dvd.style.position = 'absolute';
-  document.body.style.background = '#4d4d4d';
-  setInterval(frame, 5);
+// Logo moving velocity Variables
+let xPosition = 10;
+let yPosition = 10;
+let xSpeed = 4;
+let ySpeed = 4;
+function update() {
+  logo.style.left = xPosition + "px";
+  logo.style.top = yPosition + "px";
 }
 
-function update_color() {
-  let color = Math.round((Math.random() * 100));
-  dvd.style.fill = `hsl(${color},100%,50%)`;
-}
-
-function handle_collision() {
-  let dvd_height = dvd.offsetHeight;
-  let dvd_width = dvd.offsetWidth;
-  let left = dvd.offsetLeft;
-  let top = dvd.offsetTop;
-  let win_height = window.innerHeight;
-  let win_width = window.innerWidth;
-
-  if (left <= 0 || left + dvd_width >= win_width) {
-    x_incr = ~x_incr + 1;
-    update_color();
+setInterval(() => {
+  if (xPosition + logo.clientWidth >= window.innerWidth || xPosition <= 0) {
+    xSpeed = -xSpeed;
+    logo.style.fill = randomColor();
   }
-  if (top <= 0 || top + dvd_height >= win_height) {
-    y_incr = ~y_incr + 1;
-    update_color();
+  if (yPosition + logo.clientHeight >= window.innerHeight || yPosition <= 0) {
+    ySpeed = -ySpeed;
+    logo.style.fill = randomColor();
   }
-}
 
-function frame() {
-  handle_collision();
-  dvd.style.top = dvd.offsetTop + y_incr;
-  dvd.style.left = dvd.offsetLeft + x_incr;
-}
+  xPosition += xSpeed;
+  yPosition += ySpeed;
+  update();
+}, 1000 / FPS);
+function randomColor() {
+  let color = "#";
+  color += Math.random().toString(16).slice(2, 8).toUpperCase();
 
-init();
+  return color;
+}
+console.log(randomColor());
+
+window.addEventListener("resize", () => {
+  xPosition = 10;
+  yPosition = 10;
+
+  section.style.height = window.innerHeight + "px";
+  section.style.width = window.innerWidth + "px";
+});

@@ -2,11 +2,11 @@ xconst image = document.getElementById('image');
 const container = document.getElementById('container');
 let directionX = getRandomDirection(); // Initial horizontal direction (random)
 let directionY = getRandomDirection(); // Initial vertical direction (random)
-let speed = 4; // Initial speed (pixels per frame)
+let speed = 10; // Initial speed (pixels per frame)
 
 function getRandomDirection() {
     // Generate a random number between -1 and 1
-    return Math.random() * 4 - 1;
+    return Math.random() * 10;
 }
 
 function moveImage() {
@@ -23,12 +23,12 @@ function moveImage() {
 
     // Reverse horizontal direction if the image reaches the left or right edge of the container
     if (currentPosX <= 0 || currentPosX >= containerWidth - imageWidth) {
-        directionX *= -1;
+        directionX;
     }
 
     // Reverse vertical direction if the image reaches the top or bottom edge of the container
     if (currentPosY <= 0 || currentPosY >= containerHeight - imageHeight) {
-        directionY *= -1;
+        directionY;
     }
 
     image.style.left = currentPosX + 'px';

@@ -1,6 +1,13 @@
-const image = document.getElementById('image');
+xconst image = document.getElementById('image');
 const container = document.getElementById('container');
+let directionX = getRandomDirection(); // Initial horizontal direction (random)
+let directionY = getRandomDirection(); // Initial vertical direction (random)
 let speed = 2; // Initial speed (pixels per frame)
+
+function getRandomDirection() {
+    // Generate a random number between -1 and 1
+    return Math.random() * 2 - 1;
+}
 
 function moveImage() {
     const containerWidth = container.offsetWidth;
@@ -8,19 +15,21 @@ function moveImage() {
     const imageWidth = image.offsetWidth;
     const imageHeight = image.offsetHeight;
 
-    // Generate random horizontal and vertical directions (-1, 0, or 1)
-    const directionX = Math.floor(Math.random() * 3) - 1;
-    const directionY = Math.floor(Math.random() * 3) - 1;
-
     let currentPosX = parseInt(image.style.left) || 0;
     let currentPosY = parseInt(image.style.top) || 0;
 
     currentPosX += speed * directionX;
     currentPosY += speed * directionY;
 
-    // Ensure the image stays within the bounds of the container
-    currentPosX = Math.min(Math.max(currentPosX, 0), containerWidth - imageWidth);
-    currentPosY = Math.min(Math.max(currentPosY, 0), containerHeight - imageHeight);
+    // Reverse horizontal direction if the image reaches the left or right edge of the container
+    if (currentPosX <= 0 || currentPosX >= containerWidth - imageWidth) {
+        directionX *= -1;
+    }
+
+    // Reverse vertical direction if the image reaches the top or bottom edge of the container
+    if (currentPosY <= 0 || currentPosY >= containerHeight - imageHeight) {
+        directionY *= -1;
+    }
 
     image.style.left = currentPosX + 'px';
     image.style.top = currentPosY + 'px';
@@ -30,4 +39,5 @@ function moveImage() {
 
 // Start the animation
 moveImage();
+
 

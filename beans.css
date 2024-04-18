@@ -12,16 +12,9 @@ body {
 
 #image {
     position: absolute;
-    top: 0;
-    left: 0;
-    animation: bounce 2s infinite alternate;
+    /* Initialize position randomly within the container */
+    top: calc(100% * Math.random());
+    left: calc(100% * Math.random());
+    animation: none; /* Disable any initial animation */
 }
 
-@keyframes bounce {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: calc(100% - 100px); /* Adjust image height as needed */
-    }
-}

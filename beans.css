@@ -1,41 +1,15 @@
-:root {
-  --width: 300px;
-  --x-speed: 13s;
-  --y-speed: 7s;
-  --transition-speed: 2.2s;
-}
- 
-$size: 100px;
-
 body {
-  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f0f13;
   overflow: hidden;
-  background: #546E7A;
+  position: relative;
 }
 
-.x {
-  animation: x var(--x-speed) linear infinite alternate;
-}
-.x2 {
-  animation: x2 var(--x-speed) linear infinite alternate;
-}
-.y {
-  animation: y var(--y-speed) linear infinite alternate;
-}
-
-@keyframes x {
-  100% {
-    transform: translateX(calc(100vw - var(--width)));
-  }
-}
-@keyframes x2 {
-  100% {
-    transform: translateX(calc(-100vw + var(--width)));
-  }
-}
-
-@keyframes y {
-  100% {
-    transform: translateY(calc(100vh - var(--width)));
-  }
+#label {
+  position: absolute;
+  left: calc(50vw - 150px);
+  top: calc(50vh - 28px);
+  width: 300px;
+  height: 56px;
 }

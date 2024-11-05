@@ -40,31 +40,42 @@
             overflow: hidden;
             padding: 20px;
         }
-        .grid {
+        .store-grid {
             display: grid;
             gap: 20px;
-        }
-        .sub-grid {
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 40px; /* Added margin between sub-grids */
+            grid-template-rows: auto;
+            margin-bottom: 20px;
         }
-        .about-item {
-            background-color: #CBDEF6;
+        .asset-box {
+            background-color: #fff;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .wide-box {
-            background-color: #B6CCE2;
-            padding: 10px 20px; /* Adjusted padding to make the box shorter */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            grid-column: 1 / -1; /* Span across all columns in the grid */
-            grid-row: 2; /* Positioned in the second row of the grid */
-            margin: 20px; /* Added margin to the wide box */
-            text-align: center; /* Center align the text */
+        .asset-box img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        .button-download {
+            display: inline-block;
+            transition: all 0.2s ease-in;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #090909;
+            border-radius: 0.5em;
+            background: #e8e8e8;
+            border: 1px solid #e8e8e8;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+        }
+        .button-download:hover {
+            background-color: #009087;
+            color: #fff;
+            border: 1px solid #009087;
         }
         .see-more {
             clear: both;
@@ -112,36 +123,61 @@
         <h2>Download Assets</h2>
         <p>Browse and download high-quality backgrounds, icons, and other assets for your projects.</p>
         
+        <!-- Backgrounds Row -->
         <div class="store-grid">
-            <!-- Asset 1 -->
             <div class="asset-box">
                 <img src="background1.jpg" alt="Background 1">
                 <h3>Background 1</h3>
                 <a href="background1.jpg" download class="button-download">Download</a>
             </div>
-            
-            <!-- Asset 2 -->
-            <div class="asset-box">
-                <img src="icon1.png" alt="Icon 1">
-                <h3>Icon 1</h3>
-                <a href="icon1.png" download class="button-download">Download</a>
-            </div>
-            
-            <!-- Asset 3 -->
             <div class="asset-box">
                 <img src="background2.jpg" alt="Background 2">
                 <h3>Background 2</h3>
                 <a href="background2.jpg" download class="button-download">Download</a>
             </div>
-            
-            <!-- Asset 4 -->
+            <div class="asset-box">
+                <img src="background3.jpg" alt="Background 3">
+                <h3>Background 3</h3>
+                <a href="background3.jpg" download class="button-download">Download</a>
+            </div>
+        </div>
+
+        <!-- Icons Row -->
+        <div class="store-grid">
+            <div class="asset-box">
+                <img src="icon1.png" alt="Icon 1">
+                <h3>Icon 1</h3>
+                <a href="icon1.png" download class="button-download">Download</a>
+            </div>
             <div class="asset-box">
                 <img src="icon2.png" alt="Icon 2">
                 <h3>Icon 2</h3>
                 <a href="icon2.png" download class="button-download">Download</a>
             </div>
-            
-            <!-- Add more assets as needed -->
+            <div class="asset-box">
+                <img src="icon3.png" alt="Icon 3">
+                <h3>Icon 3</h3>
+                <a href="icon3.png" download class="button-download">Download</a>
+            </div>
+        </div>
+
+        <!-- Other Assets Row -->
+        <div class="store-grid">
+            <div class="asset-box">
+                <img src="other1.png" alt="Other Asset 1">
+                <h3>Other Asset 1</h3>
+                <a href="other1.png" download class="button-download">Download</a>
+            </div>
+            <div class="asset-box">
+                <img src="other2.png" alt="Other Asset 2">
+                <h3>Other Asset 2</h3>
+                <a href="other2.png" download class="button-download">Download</a>
+            </div>
+            <div class="asset-box">
+                <img src="other3.png" alt="Other Asset 3">
+                <h3>Other Asset 3</h3>
+                <a href="other3.png" download class="button-download">Download</a>
+            </div>
         </div>
     </div>
     <footer>
